@@ -10,6 +10,7 @@ var fs = require('fs');  // added for image handling
 
 mongoose.connect(process.env.MONGOLAB_URI || mongoURI);
 
+
 // mongoose.connect('mongodb://localhost/yelpin');
 
 var db = mongoose.connection;
