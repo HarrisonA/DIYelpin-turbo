@@ -7,7 +7,6 @@ angular.module('yelpin.createPost', [])
   $scope.customCategory = '';
   $scope.showCustomCategoryField = false;
   var temp = sharedPropertyService.getProperty();
-  // console.log('this is the set property', temp);
 
  // Check the drop down value of Categories then show/hide custom category
    $scope.checkDropDown = function(){
@@ -49,8 +48,6 @@ angular.module('yelpin.createPost', [])
     if ($scope.f){
       file = $scope.f;
       appFactory.postToPage(file, $scope.postData).then(function(response) {
-          // console.log("response from the upload request: ", response);
-          // console.log("the actual data array", response.data.img.data.data);
           // var dataNow64bit = _arrayBufferToBase64(response.data.img.data.data);
           // $scope.image = response.data.img.data.data;
           // $scope.image = dataNow64bit;

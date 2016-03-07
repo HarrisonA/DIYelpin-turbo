@@ -19,7 +19,7 @@ angular.module('yelpin.factory', [])
     file.upload = Upload.upload({
           url: '/createPost',
           data: { file: file, postData: postData},
-        });    
+        });
     return file.upload
   };
 
