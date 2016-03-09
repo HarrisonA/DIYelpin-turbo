@@ -5,7 +5,6 @@ angular.module('yelpin.factory', [])
   var setPost = function(message) {
     return $http.post('/createPost', message).then(function(response) {
       return response.data;
-      console.log(response.data);
     });
 
   };
@@ -15,7 +14,7 @@ angular.module('yelpin.factory', [])
   };
 
   var postToPage = function(file, postData){
-    console.log("\n\nfile name is: ", file.name, "\n\n");
+    // console.log("\n\nfile name is: ", file.name, "\n\n");
     file.upload = Upload.upload({
           url: '/createPost',
           data: { file: file, postData: postData},
